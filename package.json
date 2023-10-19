@@ -1,50 +1,33 @@
 {
   "name": "@nerdify/dnic",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "ID Nicaraguan validator",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "source": "src/index.js",
   "scripts": {
-    "build": "xo && ava && microbundle",
-    "test": "xo && ava",
-    "prepare": "npm run build",
-    "release": "np"
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nerdify/dnic.git"
+    "url": "git+https://github.com/inteliti/dnic/"
   },
   "keywords": [
     "dni",
-    "nica",
     "nicaragua",
     "nicaraguan",
     "validator"
   ],
   "author": "Gustavo Chavarria",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nerdify/dnic/issues"
-  },
-  "homepage": "https://github.com/nerdify/dnic#readme",
-  "devDependencies": {
-    "ava": "2.4.0",
-    "microbundle": "0.12.0-next.6",
-    "np": "5.1.0",
-    "xo": "0.25.3"
-  },
   "publishConfig": {
     "access": "public"
   },
-  "ava": {
-    "require": [
-      "esm"
-    ]
-  },
-  "xo": {
-    "prettier": true,
-    "space": true
+  "devDependencies": {
+    "microbundle": "0.15.1",
+    "mocha": "10.2.0"
   }
 }

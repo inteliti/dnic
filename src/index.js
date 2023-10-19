@@ -1,5 +1,5 @@
-import {municipalities} from './municipalities';
-import {isValidDate} from './utils';
+import { municipalities } from './municipalities';
+import { isValidDate } from './utils';
 
 /**
  * Basic Dni Validation
@@ -11,7 +11,7 @@ export const validate = dni => {
     return false;
   }
 
-  const regex = /^([0-6][\d]{2})-([0-2][\d]|3[0-1])(0[1-9]|1[0-2])([\d]{2})-([\d]{4}[A-X])$/;
+  const regex = /^([0-6][\d]{2})-([0-2][\d]|3[0-1])(0[1-9]|1[0-2])([\d]{2})-([\d]{4}[A-Z])$/;
 
   return regex.test(dni);
 };
@@ -58,4 +58,4 @@ const exportDefault = {
   isValidDate: dni => validateDate(dni)
 };
 
-export {exportDefault as default};
+export { exportDefault as default };
